@@ -1,0 +1,29 @@
+1.	Display all departments from department table.
+        select department_name from departments;
+
+2.	Display all employees from employee table.
+         select concat(first_name,' ',last_name) as Emp_names from employees;
+
+3.	Select the employee in department 30.
+          select * from employees where department_id=30;
+
+4.	List the names, numbers and departmentno of all clerks.
+           select concat(first_name,' ',last_name) as emp_name,phone_number,department_id from employees;
+
+5.	Find the depart numbers and the name of employee of all dept with Deptno greater or equal to 20.
+          select department_id,concat(first_name,' ',last_name) as emp_name from employees where department_id>20;
+
+9.	List the name, job and salary of all employees in dept 20 who earn more than 2000.
+        select first_name,job_id,salary from employees where department_id=20 and salary>2000;
+
+10.	Find all salesmen in dept 30 whose salary is greater than or equal to Rs. 1500.
+          select first_name from employees where job_id='SA_REP' and salary>1500;
+
+11.	Find all the employees whose job is either a president or manager.
+         select first_name from employees where job_id='AD_PRES' or job_id='AC_MGR';
+
+12.	Find all managers who are not in dept 30.
+        select distinct(m.first_name) from employees e left outer join employees m on m.employee_id=e.manager_id;
+         
+
+         
